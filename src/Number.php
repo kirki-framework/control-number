@@ -42,7 +42,7 @@ class Number extends Base {
 
 		$url = apply_filters(
 			'kirki_package_url_control_number',
-			trailingslashit( Kirki::$url ) . 'packages/kirki-framework/control-number/src'
+			trailingslashit( Kirki::$url ) . 'vendor/kirki-framework/control-number/src'
 		);
 
 		// Enqueue the script.
