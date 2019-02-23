@@ -32,7 +32,7 @@ class Number extends Base {
 	 */
 	public $type = 'kirki-number';
 
-		/**
+	/**
 	 * Enqueue control related scripts/styles.
 	 *
 	 * @access public
