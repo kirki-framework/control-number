@@ -30,4 +30,39 @@ class Number extends Base {
 	 * @var string
 	 */
 	public $type = 'kirki-number';
+
+		/**
+	 * Enqueue control related scripts/styles.
+	 *
+	 * @access public
+	 */
+	public function enqueue() {
+		parent::enqueue();
+
+		$url = apply_filters(
+			'kirki_package_url_control_number',
+			trailingslashit( Kirki::$url ) . 'packages/kirki-framework/control-number/src'
+		);
+
+		// Enqueue the script.
+		wp_enqueue_script(
+			'kirki-control-number',
+			"$url/assets/scripts/control.js",
+			[
+				'kirki-script',
+				'jquery',
+				'customize-base',
+			],
+			KIRKI_VERSION,
+			false
+		);
+
+		// Enqueue the style.
+		wp_enqueue_style(
+			'kirki-control-number-style',
+			"$url/assets/styles/style.css",
+			[],
+			KIRKI_VERSION
+		);
+	}
 }
