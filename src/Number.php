@@ -50,7 +50,6 @@ class Number extends Base {
 			'kirki-control-number',
 			"$url/assets/scripts/control.js",
 			[
-				'kirki-script',
 				'jquery',
 				'customize-base',
 			],
