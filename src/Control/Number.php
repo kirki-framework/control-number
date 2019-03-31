@@ -52,9 +52,8 @@ class Number extends Base {
 		add_action(
 			'customize_controls_print_footer_scripts',
 			function() {
-				$path = apply_filters( 'kirki_control_view_number', __DIR__ . '/view.php' );
 				echo '<script type="text/html" id="tmpl-kirki-input-number">';
-				include $path;
+				include apply_filters( 'kirki_control_view_number', __DIR__ . '/view.php' );
 				echo '</script>';
 			}
 		);
